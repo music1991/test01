@@ -1,10 +1,14 @@
-import { useContext } from "react/cjs/react.development";
+//import { useContext } from "react/cjs/react.development";
+import { useContext } from "react/cjs/react.production.min";
+
+
 import ThemeContext from "../context/ThemeContext";
 import AuthContext from "../context/AuthContext";
 import LanguageContext from "../context/LanguageContext";
 
+
 const HeaderContext = () => {   
-    const { theme, handleTheme } = useContext(ThemeContext);
+    const { theme, handleTheme } = useContext(ThemeContext)
     const { auth, handleAuth } = useContext(AuthContext);
     const { texts, handleLanguage } = useContext(LanguageContext);
 
